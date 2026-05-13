@@ -37,7 +37,7 @@ menu {
 .top-container .grey-sub {
     margin: 0;
     font-size: 1.1rem;
-    opacity: 0.5;
+    color: #cbd5e1;
 }
 
 .dark-strip {
@@ -121,7 +121,7 @@ menu {
 .blue-button {
     display: inline-block;
     color: #fff;
-    background-color: #39a3eb;
+    background-color: #1d84c6;
     padding: 0.6rem 1.2rem;
     border-radius: 4px;
     text-decoration: none;
@@ -130,7 +130,7 @@ menu {
 }
 
 .blue-button:hover {
-    background-color: #2980b9;
+    background-color: #145a86;;
 }
 
 .right-side-panel {
@@ -205,4 +205,46 @@ menu {
 .bottom-container .base-text {
     margin: 0;
     color: #fff;
+}
+
+/* Focus Styles */
+a:focus,
+button:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 3px;
+}
+
+/* Skip Link Styles */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .middle-wrapper {
+        flex-direction: column;
+    }
+
+    .dark-strip .horizontal-group {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
 }
